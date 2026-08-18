@@ -1,0 +1,413 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background: #f3f6fa;
+  color: #172033;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.dashboard {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 36px 40px 50px;
+}
+
+.dashboard > h2 {
+  margin: 0 0 28px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #102a43;
+}
+
+
+/* ================================
+   TOP STAT CARDS
+================================ */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  position: relative;
+  background: #ffffff;
+  padding: 24px 26px;
+  border: 1px solid #dce4ec;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.06);
+  overflow: hidden;
+}
+
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #123b63;
+}
+
+.dashboard-card h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #60758a;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.dashboard-card p {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 700;
+  color: #102a43;
+}
+
+
+/* ================================
+   DEVELOPERS / PROJECTS / SKILLS
+================================ */
+
+/*
+   IMPORTANT:
+   This creates exactly 3 columns
+   on laptop/desktop.
+*/
+
+.data-sections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+
+/* ================================
+   DATA SECTIONS
+================================ */
+
+.data-section {
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.05);
+}
+
+.data-section > h2 {
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5ebf1;
+
+  font-size: 19px;
+  font-weight: 700;
+  color: #123b63;
+}
+
+
+/* ================================
+   ITEM GRID
+================================ */
+
+.item-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+
+/* ================================
+   DEVELOPER / PROJECT / SKILL CARD
+================================ */
+
+.data-card {
+  padding: 15px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8ef;
+  border-radius: 9px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.data-card:hover {
+  background: #ffffff;
+  border-color: #b9c9d9;
+  box-shadow: 0 3px 10px rgba(16, 42, 67, 0.07);
+}
+
+.data-card h3 {
+  margin: 0 0 9px;
+  font-size: 15px;
+  font-weight: 650;
+  color: #172033;
+}
+
+.data-card p {
+  margin: 5px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #60758a;
+}
+
+.data-card strong {
+  color: #34495e;
+  font-weight: 600;
+}
+
+
+/* ================================
+   RECOMMENDATION SECTIONS
+================================ */
+
+.recommendation-section {
+  width: 100%;
+  margin-bottom: 24px;
+
+  background: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: 12px;
+  padding: 24px;
+
+  box-shadow: 0 4px 14px rgba(16, 42, 67, 0.05);
+}
+
+.recommendation-section h2 {
+  margin: 0 0 18px;
+
+  font-size: 20px;
+  font-weight: 700;
+  color: #123b63;
+}
+
+
+/* ================================
+   PROFESSIONAL DROPDOWN
+================================ */
+
+.recommendation-section select {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 12px 40px 12px 14px;
+
+  font-size: 14px;
+  font-family: inherit;
+  color: #172033;
+
+  background: #ffffff;
+
+  border: 1px solid #cbd6e2;
+  border-radius: 8px;
+
+  outline: none;
+  cursor: pointer;
+
+  appearance: auto;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recommendation-section select:hover {
+  border-color: #8fa5ba;
+}
+
+.recommendation-section select:focus {
+  border-color: #123b63;
+  box-shadow: 0 0 0 3px rgba(18, 59, 99, 0.12);
+}
+
+
+/* ================================
+   RESULT GRID
+================================ */
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+
+  margin-top: 20px;
+}
+
+
+/* ================================
+   RECOMMENDATION CARD
+================================ */
+
+.recommendation-card {
+  padding: 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+
+  box-shadow: 0 2px 7px rgba(16, 42, 67, 0.04);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recommendation-card:hover {
+  border-color: #aebfd0;
+  box-shadow: 0 4px 12px rgba(16, 42, 67, 0.08);
+}
+
+.recommendation-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 16px;
+  font-weight: 650;
+  color: #172033;
+}
+
+.recommendation-card p {
+  margin: 6px 0;
+
+  font-size: 13px;
+  line-height: 1.5;
+  color: #60758a;
+}
+
+.recommendation-card strong {
+  color: #34495e;
+  font-weight: 600;
+}
+
+
+/* ================================
+   EMPTY RESULT AREA
+================================ */
+
+.recommendation-grid:empty {
+  display: none;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1100px) {
+
+  .dashboard {
+    padding: 30px;
+  }
+
+  .data-sections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .recommendation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+  .dashboard {
+    padding: 22px 18px 35px;
+  }
+
+  .dashboard > h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .data-sections {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .data-section {
+    padding: 18px;
+  }
+
+  .recommendation-section {
+    padding: 18px;
+  }
+
+  .recommendation-section select {
+    max-width: none;
+  }
+
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 420px) {
+
+  .dashboard {
+    padding: 18px 14px 30px;
+  }
+
+  .dashboard-card p {
+    font-size: 28px;
+  }
+
+  .data-section > h2,
+  .recommendation-section h2 {
+    font-size: 18px;
+  }
+
+  .data-card {
+    padding: 13px;
+  }
+}

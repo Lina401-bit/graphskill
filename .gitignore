@@ -1,0 +1,22 @@
+# Backend
+graphskill-backend/target/
+graphskill-backend/.idea/
+graphskill-backend/*.iml
+
+# Environment / secrets
+.env
+.env.*
+*.env
+
+# Frontend
+graphskill-frontend/node_modules/
+graphskill-frontend/dist/
+graphskill-frontend/.vite/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
